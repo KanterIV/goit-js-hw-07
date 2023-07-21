@@ -16,7 +16,7 @@ const galleryItemEl = galleryItems
     </li>`
   )
   .join("");
-galleryEl.innerHTML = galleryItemEl;
+galleryEl.insertAdjacentHTML("beforeend", galleryItemEl);
 
 galleryEl.addEventListener("click", onGalleryModalOpenClick);
 
