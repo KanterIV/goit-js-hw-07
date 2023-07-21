@@ -31,4 +31,14 @@ function onGalleryModalOpenClick(event) {
 `);
 
   instance.show();
+
+  //! Закриття модального вікна через клавішу "Esc", але поки що без зняття слухача подій
+  if (instance.visible()) {
+    document.addEventListener("keydown", closeModalEsc);
+    function closeModalEsc(event) {
+      if (event.code === "Escape") {
+        instance.close();
+      }
+    }
+  }
 }
